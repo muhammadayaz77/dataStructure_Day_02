@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Insertion</title>
+    <link rel="stylesheet" href="slyle.css">
+</head>
+<body>
+    <input type="number" name="" id="position" placeholder="Enter Position ">
+    <input type="number" name="" id="newEl" placeholder="Enter New Element ">
+    <button class="btn">Add New Element</button>
+    <br>
+</body>
+<script>
+    let data = [10,30,38,20,90,32];
+    document.querySelector('.btn').onclick = () => {
+        // console.log(data);
+    let newEl = document.getElementById('newEl').value;
+    let position = document.getElementById('position').value;
+    newEl = Number(newEl)
+    position = Number(position);
+for(let i = data.length-1;i>=0;i--)
+{
+    if(i>=position)
+    {
+        data[i+1] = data[i];
+        if(i == position)
+        {
+            data[i] = newEl;
+        }
+    }
+}
+console.log(data)
+    }
+// console.log(data)
+
+</script>
+</html>
